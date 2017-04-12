@@ -65,5 +65,38 @@ time.sleep(delay)
 subprocess.Popen(Testbuild_Backend_Monitor,shell=True)
 
 print("============================================================================================")
+print("Open Hybrid Consoles - VPS, APS, WPC and Backend in separate Chrome window")
+print("============================================================================================\n\n")
+# Open v6 WPC and Backend web consoles
+hybrid_Vcs_Monitor = "cmd /c start chrome https://hybrid.omnijoin.com/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=VCS --new-window"
+hybrid_Aps_Monitor = "cmd /c start chrome https://hybrid.omnijoin.com/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=APS --new-tab"
+hybrid_WPS_Monitor = "cmd /c start chrome https://hybrid.omnijoin.com/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=WPC --new-tab"
+hybrid_Backend_Monitor = "cmd /c start chrome https://hybrid.omnijoin.com/_admin/BackendServerMonitor.aspx --new-tab"
+subprocess.Popen(hybrid_Vcs_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(hybrid_Aps_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(hybrid_WPS_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(hybrid_Backend_Monitor,shell=True)
+
+print("============================================================================================")
+print("Open UK Dedicated Consoles - VPS, APS, WPC and Backend in separate Chrome window")
+print("============================================================================================\n\n")
+# Open v6 WPC and Backend web consoles
+DedicatedUK_Vcs_Monitor = "cmd /c start chrome https://support.omnijoin.co.uk/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=VCS --new-window"
+DedicatedUK_Aps_Monitor = "cmd /c start chrome https://support.omnijoin.co.uk/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=APS --new-tab"
+DedicatedUK_WPS_Monitor = "cmd /c start chrome https://support.omnijoin.co.uk/_admin/FieldServerMonitor.aspx?Field=Dedicated&Type=WPC --new-tab"
+DedicatedUK_Backend_Monitor = "cmd /c start chrome https://support.omnijoin.co.uk/_admin/BackendServerMonitor.aspx --new-tab"
+subprocess.Popen(DedicatedUK_Vcs_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(DedicatedUK_Aps_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(hDedicatedUK_Aps_Monitor,shell=True)
+time.sleep(delay)
+subprocess.Popen(DedicatedUK_Backend_Monitor,shell=True)
+
+
+print("============================================================================================")
 print("DONE")
 print("============================================================================================\n\n")
